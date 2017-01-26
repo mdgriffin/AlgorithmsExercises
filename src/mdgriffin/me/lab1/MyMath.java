@@ -78,4 +78,34 @@ public class MyMath {
 
         return isPrime;
     }
+
+    public boolean validPassword (String pass) {
+        boolean valid = true;
+        int numUpper = 0;
+        int numLower = 0;
+        int numNumeric = 0;
+        char passChar;
+
+        if (pass.length() < 8) {
+            return false;
+        }
+
+        for (int i = 0; i < pass.length(); i++) {
+            passChar = pass.charAt(i);
+
+            if (passChar >= 'A' && <= 'Z') {
+                numUpper++;
+            } else if (passChar >= 'a' && <= 'z') {
+                numLower++;
+            } else if (passChar >= '1' && <= '9') {
+                numNumeric++;
+            }
+        }
+
+        if (numUpper < 1 || numLower < 1 || numNumeric < 1) {
+            return false;
+        }
+
+        return valid;
+    }
 }
