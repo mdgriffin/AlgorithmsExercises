@@ -32,16 +32,50 @@ public class MyMath {
     }
 
     public int sumToN(int num) {
-        int sum = 1;
+        int sum = 0;
 
         if (num < 1) {
             return -1;
         }
 
-        for (int i = 1;i < num; i++) {
+        for (int i = 1;i <= num; i++) {
             sum += i;
         }
 
         return sum;
+    }
+
+    public double calcFactorial (int num) {
+        double sum = 1;
+
+        if (num < 1) {
+            return -1;
+        }
+
+        for (int i = 1;i <= num; i++) {
+            sum *= i;
+        }
+
+        return sum;
+    }
+
+    public boolean checkIsPrime (int num) {
+        boolean isPrime = true;
+
+        if (num < 3) {
+            return true;
+        }
+
+        if (num % 2 == 0) {
+            return false;
+        }
+
+        for (int i = num / 2;i > 1; i--) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return isPrime;
     }
 }
