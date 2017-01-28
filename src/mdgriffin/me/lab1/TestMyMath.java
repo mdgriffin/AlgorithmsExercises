@@ -2,9 +2,14 @@ package mdgriffin.me.lab1;
 /**
  * Created by t00119683 on 25/01/2017.
  */
+import java.util.Scanner;
+
 public class TestMyMath {
     public static void main(String[] args) {
         MyMath myMath = new MyMath();
+        String password;
+
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Max of three: " + myMath.getmaxOfThree(45, 23, 15));
 
@@ -27,6 +32,24 @@ public class TestMyMath {
                 System.out.println("True: All prime");
             }
         }
+
+
+        System.out.print("Please enter a password: ");
+        password = input.nextLine();
+
+        while (!myMath.validPassword(password)) {
+            System.out.print(
+                    "Invalid password" +
+                    "\nPassword must contain at least 8 character, contain upper and lowercase letter and contain at least one digit." +
+                    "\nPlease enter password again: "
+            );
+
+
+            password = input.nextLine();
+        }
+
+
+        System.out.println("Password is valid");
 
     }
 }

@@ -93,11 +93,11 @@ public class MyMath {
         for (int i = 0; i < pass.length(); i++) {
             passChar = pass.charAt(i);
 
-            if (passChar >= 'A' && <= 'Z') {
+            if (passChar >= 'A' && passChar <= 'Z') {
                 numUpper++;
-            } else if (passChar >= 'a' && <= 'z') {
+            } else if (passChar >= 'a' && passChar <= 'z') {
                 numLower++;
-            } else if (passChar >= '1' && <= '9') {
+            } else if (passChar >= '1' && passChar <= '9') {
                 numNumeric++;
             }
         }
