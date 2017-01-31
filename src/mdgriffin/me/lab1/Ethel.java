@@ -11,14 +11,14 @@ public class Ethel {
     private int numChars;
     final int NUM_LETTERS = 26;
 
-    public Ethel (int numChars, int a, int b, String encryptedString) {
-        this.numChars = numChars;
+    public Ethel (int a, int b, String encryptedString) {
+        this.numChars = encryptedString.length();
         offset = (int)Math.pow(a, b) % NUM_LETTERS;
         this.encryptedString = encryptedString;
     }
 
     public String decrypt () {
-       String decryptedString = "";
+        String decryptedString = "";
         char currentLetter;
 
         // loop over each char
@@ -37,18 +37,13 @@ public class Ethel {
         for (int i = 0; i < encryptedString.length(); i++) {
             currentLetter = encryptedString.charAt(i);
 
-            //System.out.println("\n\nBefore: " + currentLetter);
-
-            if (currentLetter != ' ') {
-                if (currentLetter - offset > LAST_CHAR) {
-                    currentLetter = (char)(FIRST_CHAR + ((currentLetter - offset) - LAST_CHAR));
+            if (currentLetter != ' ' && currentLetter != '\n') {
+                if (currentLetter - offset < FIRST_CHAR) {
+                    currentLetter = (char)((LAST_CHAR + 1) - (FIRST_CHAR - (currentLetter - offset)));
                 } else {
                     currentLetter = (char)(currentLetter - offset);
                 }
             }
-
-            //System.out.println("After:" + currentLetter);
-
             decryptedString += currentLetter;
         }
 
