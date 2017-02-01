@@ -4,12 +4,12 @@ package mdgriffin.me.lab1;
  */
 public class MyMath {
 
-    public static int getmaxOfThree (int num1, int num2, int num3) {
+    public static int getMaxOfThree (int num1, int num2, int num3) {
         int max = num1;
 
-        if (num2 > max) {
+        if (num2 > num1 && num2 > num3) {
             max = num2;
-        } else if (num3 > max) {
+        } else if (num3 > num1) {
             max = num3;
         }
 
@@ -58,7 +58,7 @@ public class MyMath {
         return sum;
     }
 
-    public static boolean checkIsPrime (int num) {
+    public static boolean isPrime (int num) {
         boolean isPrime = true;
 
         if (num < 3) {

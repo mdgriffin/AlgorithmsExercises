@@ -10,12 +10,17 @@ import static org.junit.Assert.*;
 public class MyMathTest {
     @Test
     public void getmaxOfThree() throws Exception {
+        assertEquals(MyMath.getMaxOfThree(1,2,3), 3);
+        assertEquals(MyMath.getMaxOfThree(42, 23, 101), 101);
 
     }
 
     @Test
     public void calcPower() throws Exception {
-
+        assertEquals(MyMath.calcPower(4, 0), 1, 3);
+        assertEquals(MyMath.calcPower(8, 1), 8, 3);
+        assertEquals(MyMath.calcPower(2, 4), 16, 3);
+        assertEquals(MyMath.calcPower(3.5, 7), 6433.929, 3);
     }
 
     @Test
@@ -30,7 +35,18 @@ public class MyMathTest {
 
     @Test
     public void checkIsPrime() throws Exception {
+        int[] primeNums = new int[]{2, 3, 5, 7, 11, 13, 17, 59, 61, 97};
+        int[] notPrimeNums = new int[]{4, 6, 8, 8, 16, 18, 20, 21, 22};
 
+        for (int i =0; i < primeNums.length; i++) {
+            assertEquals(MyMath.isPrime(primeNums[i]), true);
+        }
+
+        for (int j = 0; j < notPrimeNums.length; j++) {
+            assertEquals(MyMath.isPrime(notPrimeNums[j]), false);
+        }
+
+        //assertEquals();
     }
 
     @Test
