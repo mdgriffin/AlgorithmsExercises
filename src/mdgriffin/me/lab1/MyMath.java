@@ -62,7 +62,7 @@ public class MyMath {
         boolean isPrime = true;
 
         if (num < 3) {
-            return true;
+            return isPrime;
         }
 
         if (num % 2 == 0) {
