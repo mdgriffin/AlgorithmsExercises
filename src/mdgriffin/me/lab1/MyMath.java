@@ -3,9 +3,8 @@ package mdgriffin.me.lab1;
  * Created by t00119683 on 25/01/2017.
  */
 public class MyMath {
-    MyMath () {}
 
-    public int getmaxOfThree (int num1, int num2, int num3) {
+    public static int getmaxOfThree (int num1, int num2, int num3) {
         int max = num1;
 
         if (num2 > max) {
@@ -17,8 +16,8 @@ public class MyMath {
         return max;
     }
 
-    public int calcPower (int num, int power) {
-        int sum = 1;
+    public static double calcPower (double num, int power) {
+        double sum = 1;
 
         if (power < 0) {
             return -1;
@@ -31,7 +30,7 @@ public class MyMath {
         return sum;
     }
 
-    public int sumToN(int num) {
+    public static int sumToN(int num) {
         int sum = 0;
 
         if (num < 1) {
@@ -45,7 +44,7 @@ public class MyMath {
         return sum;
     }
 
-    public double calcFactorial (int num) {
+    public static double calcFactorial (int num) {
         double sum = 1;
 
         if (num < 1) {
@@ -59,7 +58,7 @@ public class MyMath {
         return sum;
     }
 
-    public boolean checkIsPrime (int num) {
+    public static boolean checkIsPrime (int num) {
         boolean isPrime = true;
 
         if (num < 3) {
@@ -79,7 +78,7 @@ public class MyMath {
         return isPrime;
     }
 
-    public boolean validPassword (String pass) {
+    public static boolean validPassword (String pass) {
         boolean valid = true;
         int numUpper = 0;
         int numLower = 0;
