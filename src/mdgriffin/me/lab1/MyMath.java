@@ -73,7 +73,7 @@ public class MyMath {
         return isPrime;
     }
 
-    public static boolean validPassword (String pass) {
+    public static boolean isValidPassword (String pass) {
         boolean valid = true;
         int numUpper = 0;
         int numLower = 0;

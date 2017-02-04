@@ -49,13 +49,14 @@ public class MyMathTest {
         for (int j = 0; j < notPrimeNums.length; j++) {
             assertEquals(MyMath.isPrime(notPrimeNums[j]), false);
         }
-
-        //assertEquals();
     }
 
     @Test
     public void validPassword() throws Exception {
-
+        assertEquals(MyMath.isValidPassword("Ab1cdefg"), true);
+        assertEquals(MyMath.isValidPassword("shorty"), false);
+        assertEquals(MyMath.isValidPassword("abcdefghij"), false);
+        assertEquals(MyMath.isValidPassword("123456789"), false);
     }
 
 }
