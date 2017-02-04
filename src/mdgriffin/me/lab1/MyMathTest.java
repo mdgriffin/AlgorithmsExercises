@@ -25,7 +25,9 @@ public class MyMathTest {
 
     @Test
     public void sumToN() throws Exception {
-
+        assertEquals(MyMath.sumToN(5), 15);
+        assertEquals(MyMath.sumToN(11), 66);
+        assertEquals(MyMath.sumToN(25), 325);
     }
 
     @Test
