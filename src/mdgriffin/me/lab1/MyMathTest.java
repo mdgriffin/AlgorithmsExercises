@@ -36,11 +36,12 @@ public class MyMathTest {
     @Test
     public void checkIsPrime() throws Exception {
         int[] primeNums = new int[]{2, 3, 5, 7, 11, 13, 17, 59, 61, 97};
-        int[] notPrimeNums = new int[]{4, 6, 8, 8, 16, 18, 20, 21, 22};
 
         for (int i =0; i < primeNums.length; i++) {
             assertEquals(MyMath.isPrime(primeNums[i]), true);
         }
+
+        int[] notPrimeNums = new int[]{4, 6, 8, 8, 16, 18, 20, 21, 22};
 
         for (int j = 0; j < notPrimeNums.length; j++) {
             assertEquals(MyMath.isPrime(notPrimeNums[j]), false);

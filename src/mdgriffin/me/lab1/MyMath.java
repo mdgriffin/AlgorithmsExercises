@@ -60,18 +60,13 @@ public class MyMath {
 
     public static boolean isPrime (int num) {
         boolean isPrime = true;
+        int range = num / 2;
 
-        if (num < 3) {
-            return isPrime;
-        }
-
-        if (num % 2 == 0) {
-            return false;
-        }
-
-        for (int i = num / 2;i > 1; i--) {
-            if (num % i == 0) {
-                return false;
+        if (num > 3) {
+            for (int i = 2;i <= range; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
             }
         }
 
