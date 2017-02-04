@@ -32,7 +32,8 @@ public class MyMathTest {
 
     @Test
     public void calcFactorial() throws Exception {
-
+        assertEquals(MyMath.calcFactorial(6), 720, 3);
+        assertEquals(MyMath.calcFactorial(11), 39916800, 3);
     }
 
     @Test
