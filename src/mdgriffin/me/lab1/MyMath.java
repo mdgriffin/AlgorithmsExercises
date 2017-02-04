@@ -1,7 +1,5 @@
 package mdgriffin.me.lab1;
-/**
- * Created by t00119683 on 25/01/2017.
- */
+
 public class MyMath {
 
     public static int getMaxOfThree (int num1, int num2, int num3) {

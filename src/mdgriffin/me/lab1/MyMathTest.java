@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by t00119683 on 01/02/2017.
- */
 public class MyMathTest {
     @Test
     public void getmaxOfThree() throws Exception {
@@ -37,7 +34,7 @@ public class MyMathTest {
     }
 
     @Test
-    public void checkIsPrime() throws Exception {
+    public void isPrime() throws Exception {
         int[] primeNums = new int[]{2, 3, 5, 7, 11, 13, 17, 59, 61, 97};
 
         for (int i =0; i < primeNums.length; i++) {
@@ -52,7 +49,7 @@ public class MyMathTest {
     }
 
     @Test
-    public void validPassword() throws Exception {
+    public void isValidPassword() throws Exception {
         assertEquals(MyMath.isValidPassword("Ab1cdefg"), true);
         assertEquals(MyMath.isValidPassword("shorty"), false);
         assertEquals(MyMath.isValidPassword("abcdefghij"), false);
