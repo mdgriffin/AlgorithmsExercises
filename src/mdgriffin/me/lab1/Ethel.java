@@ -1,24 +1,10 @@
 package mdgriffin.me.lab1;
 
-/**
- * Created by mdgriffin on 28/01/2017.
- */
+
 public class Ethel {
     private final static char FIRST_CHAR = 'A';
     private final static char LAST_CHAR = 'Z';
     final static int NUM_LETTERS = 26;
-    //private int offset;
-    //private String encryptedString;
-    //private int numChars;
-
-
-    /*
-    public Ethel (int a, int b, String encryptedString) {
-        this.numChars = encryptedString.length();
-        offset = (int)Math.pow(a, b) % NUM_LETTERS;
-        this.encryptedString = encryptedString;
-    }
-    */
 
     public static String decrypt (String encryptedString, int offset) {
         String decryptedString = "";
