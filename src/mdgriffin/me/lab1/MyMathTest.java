@@ -9,7 +9,6 @@ public class MyMathTest {
     public void getmaxOfThree() throws Exception {
         assertEquals(MyMath.getMaxOfThree(1,2,3), 3);
         assertEquals(MyMath.getMaxOfThree(42, 23, 101), 101);
-
     }
 
     @Test
