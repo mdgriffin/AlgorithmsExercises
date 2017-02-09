@@ -34,28 +34,19 @@ public class Encryption {
         return ciphertext;
     }
 
-    public static String decrypt (String encrpytedStr, int numColumns){
-        String plainText = "";
-        int numRows = encrpytedStr.length() / numColumns;
-
-
-        // 0, 4,  8, 12, 16
-        // 1, 5, 9, 13, 17
-        // 2, 6, 10, 14, 18
-        // 3, 7, 11, 15, 19
-
-        for (int row = 1; row <= numRows; numRows++) {
-
-            for (int col = 1; col <= numColumns; col++) {
-
-                plainText.charAt(encrpytedStr.length() % (row * col + numRows) - 1);
-
+    public static String decrypt (String encryptedString, String plaintText, int numRows, int numColumns) {
+        if (encryptedString.length() == numColumns) {
+            plaintText += encryptedString;
+            return plaintText;
+        } else {
+            for (int i = 0;i < numRows; i++) {
+                int index = i + numRows;
+                plaintText += encryptedString.charAt(index);
+                encryptedString = encryptedString.substring(0, index) + encryptedString.substring(index+1);
             }
 
+            return decrypt(encryptedString, plaintText, --numRows, numColumns);
         }
-
-        return plainText;
-
     }
 
     private static String padOut (String srcStr, int numCharacters, char padChar) {

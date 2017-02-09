@@ -13,7 +13,8 @@ public class EncryptionTest {
 
     @Test
     public void decrypt() throws Exception {
-        assertEquals("THISISASECRETMESSAGE", Encryption.decrypt("TSRSHAESISTASEMGICEE", 5));
+        // TODO: Need to calculate the number of rows on first call
+        assertEquals("THISISASECRETMESSAGE", Encryption.decrypt("TSRSHAESISTASEMGICEE", "", 4, 5));
     }
 
 }
