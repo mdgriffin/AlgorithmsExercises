@@ -2,6 +2,8 @@ package mdgriffin.me.lab2;
 
 /**
  * Encryption and Decryption using a transpositional cipher
+ *
+ * @author Michael Griffin
  */
 
 public class Encryption {

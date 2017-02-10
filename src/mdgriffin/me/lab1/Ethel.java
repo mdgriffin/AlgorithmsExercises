@@ -4,6 +4,8 @@ package mdgriffin.me.lab1;
  * This is more commonly known as a Caesar Cipher
  * Characters a shifted by a specified number to encrypt the strip
  * Shifting in the opposite direction decrypts the string
+ *
+ * @author Michael Griffin
  */
 
 public class Ethel {

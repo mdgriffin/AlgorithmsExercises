@@ -2,6 +2,7 @@ package mdgriffin.me.lab1;
 
 /**
  * A Utility class of Math Methods
+ * @author Michael Griffin
  */
 
 public class MyMath {
