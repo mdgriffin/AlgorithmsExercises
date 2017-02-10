@@ -11,6 +11,14 @@ public class Ethel {
     private final static char LAST_CHAR = 'Z';
     final static int NUM_LETTERS = 26;
 
+    /**
+     * Decrypts an encrypted String using a Caesar Cipher
+     *
+     * @param encryptedString  The source encrpted String
+     * @param offset           The number of characters to offset
+     * @return                 A unencrypted String
+     */
+
     public static String decrypt (String encryptedString, int offset) {
         String decryptedString = "";
         char currentLetter;
@@ -32,6 +40,14 @@ public class Ethel {
         return decryptedString;
     }
 
+    /**
+     * Encrypt a String using a Caesar Cipher
+     *
+     * @param source  The plain text unencrypted String
+     * @param offset  The number of characters to offset by
+     * @return        A encrypted String
+     */
+
     public static String encrypt (String source, int offset) {
         String encrypted = "";
         char currentLetter;
@@ -49,7 +65,6 @@ public class Ethel {
             }
             encrypted += currentLetter;
         }
-
 
         return encrypted;
     }
