@@ -1,5 +1,10 @@
 package mdgriffin.me.lab1;
-
+/**
+ * Ethel Solution
+ * This is more commonly known as a Caesar Cipher
+ * Characters a shifted by a specified number to encrypt the strip
+ * Shifting in the opposite direction decrypts the string
+ */
 
 public class Ethel {
     private final static char FIRST_CHAR = 'A';

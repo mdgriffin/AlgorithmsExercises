@@ -5,7 +5,7 @@ public class Encryption {
     public static String encrypt (String plainText, int numColumns) {
 
         // Remove all spaces
-        plainText = plainText.replaceAll("\\s+","");
+        plainText = plainText.replace(" ", "");
         int numRows;
 
         // Calculate numRows required for plaintext
