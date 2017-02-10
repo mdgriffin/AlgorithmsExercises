@@ -37,11 +37,10 @@ public class Encryption {
     public static String decrypt (String encryptedString, int numColumns) {
         String plaintText = encryptedString;
         int numRows = encryptedString.length() / numColumns;
-        int i = 0;
 
-        for (int row = 0; row < numRows; row++) {
-            for (int col = 0; col < numColumns; col++) {
-                plaintText = plaintText.substring(0, i) + encryptedString.charAt(col * numRows + row) + plaintText.substring(i++ + 1);
+        for (int row = 0, i = 0; row < numRows; row++) {
+            for (int col = 0; col < numColumns; col++, i++) {
+                plaintText = plaintText.substring(0, i) + encryptedString.charAt(col * numRows + row) + plaintText.substring(i + 1);
             }
         }
 
@@ -54,7 +53,6 @@ public class Encryption {
         }
 
         return srcStr;
-
     }
 
 }

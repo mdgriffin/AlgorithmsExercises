@@ -37,7 +37,7 @@ public class Ethel {
 
             if (currentLetter != ' ' && currentLetter != '\n') {
                 if (currentLetter + offset > LAST_CHAR) {
-                    currentLetter = (char)(FIRST_CHAR  - ((currentLetter - offset) - LAST_CHAR));
+                    currentLetter = (char)(FIRST_CHAR - 1 + ((currentLetter + offset) - LAST_CHAR));
                 } else {
                     currentLetter = (char)(currentLetter + offset);
                 }

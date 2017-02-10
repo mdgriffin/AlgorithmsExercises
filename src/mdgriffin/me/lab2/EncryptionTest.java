@@ -15,7 +15,7 @@ public class EncryptionTest {
     public void decrypt() throws Exception {
         assertEquals("THISISASECRETMESSAGE", Encryption.decrypt("TSRSHAESISTASEMGICEE", 5));
         // TODO if number has a remainder subtract that number of char from end of string
-        assertEquals("IWANDEREDlonelyasacloudThatfloatsonhighoervalesandhills", Encryption.decrypt("IehinWlagdAythhNafoiDslelEaorlRcavsEltaXDoslXluoeXodnsXnThaX", 12));
+        assertEquals("IWANDEREDlonelyasacloudThatfloatsonhighoervalesandhillsXXXXX", Encryption.decrypt("IehinWlagdAythhNafoiDslelEaorlRcavsEltaXDoslXluoeXodnsXnThaX", 12));
     }
 
 }
