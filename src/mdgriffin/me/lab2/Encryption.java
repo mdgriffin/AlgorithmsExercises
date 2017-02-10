@@ -61,14 +61,7 @@ public class Encryption {
      */
 
     public static String decrypt (String encryptedString, int numColumns) {
-        int numRows;
-
-        // Calculate numRows required for plaintext
-        if (encryptedString.length() % numColumns == 0) {
-            numRows = encryptedString.length() / numColumns;
-        } else {
-            numRows = encryptedString.length() / numColumns + 1;
-        }
+        int numRows = encryptedString.length() / numColumns;
 
         return encrypt(encryptedString, numRows);
     }
