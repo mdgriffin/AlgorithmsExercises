@@ -31,7 +31,7 @@ public class Encryption {
             numRows = plainText.length() / numColumns + 1;
         }
 
-        // If plaintext doesn’t fit exactly, pad it with Xs
+        // If plaintext doesn't fit exactly, pad it with Xs
         if (plainText.length() < numColumns * numRows) {
             plainText = padOut(plainText, numColumns *  numRows, 'X');
         }
