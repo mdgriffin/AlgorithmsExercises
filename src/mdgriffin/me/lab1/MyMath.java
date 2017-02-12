@@ -154,9 +154,18 @@ public class MyMath {
     }
 
 
-    public static ArrayList<Integer> findPrimesInRange (int lowerLimit, int upperLimit) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+    public static ArrayList<Integer> findPrimesInRange (int upperLimit) {
+        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> checkRange = new ArrayList<>();
 
+        // generate an array of ints from lower limit to upper limit;
+        for (int i = 0; i < upperLimit; i++) {
+            checkRange.add(i, i + 2);
+        }
+
+        // Loop over the checkRange
+        // starting at 2, remove any multiples of 2
+        // Continue until you reach the square root of the upperlimit
 
         return result;
     }
