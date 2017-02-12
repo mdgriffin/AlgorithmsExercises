@@ -1,5 +1,7 @@
 package mdgriffin.me.lab1;
 
+import java.util.ArrayList;
+
 /**
  * A Utility class of Math Methods
  * @author Michael Griffin
@@ -149,5 +151,13 @@ public class MyMath {
         }
 
         return valid;
+    }
+
+
+    public static ArrayList<Integer> findPrimesInRange (int lowerLimit, int upperLimit) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+
+        return result;
     }
 }
