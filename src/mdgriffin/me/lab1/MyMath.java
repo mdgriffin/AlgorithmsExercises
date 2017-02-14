@@ -1,6 +1,7 @@
 package mdgriffin.me.lab1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * A Utility class of Math Methods
@@ -154,19 +155,29 @@ public class MyMath {
     }
 
 
-    public static ArrayList<Integer> findPrimesInRange (int upperLimit) {
-        ArrayList<Integer> result = new ArrayList<>();
-        ArrayList<Integer> checkRange = new ArrayList<>();
+    public static int[] findPrimesInRange (int upperLimit) {
+        int[] range = new int[upperLimit];
 
-        // generate an array of ints from lower limit to upper limit;
-        for (int i = 0; i < upperLimit; i++) {
-            checkRange.add(i, i + 2);
+        int numNonPrime = 0;
+
+        for (int i = 2; i <= Math.sqrt(upperLimit); i++) {
+            for (int j = i; j <= upperLimit; j += i) {
+                if (j != i && range[j - 1] == 0) {
+                    range[j - 1] = j;
+                    numNonPrime++;
+                }
+            }
         }
 
-        // Loop over the checkRange
-        // starting at 2, remove any multiples of 2
-        // Continue until you reach the square root of the upperlimit
+        int[] primes = new int[upperLimit - numNonPrime];
+        int index = 0;
 
-        return result;
+        for (int i = 0; i < range.length; i++) {
+            if (range[i] == 0) {
+                primes[index++] = i + 1;
+            }
+        }
+
+        return primes;
     }
 }

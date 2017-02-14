@@ -55,4 +55,9 @@ public class MyMathTest {
         assertEquals(false, MyMath.isValidPassword("123456789"));
     }
 
+    @Test
+    public void findPrimesInRange() throws Exception {
+        assertArrayEquals(new int[]{1,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97}, MyMath.findPrimesInRange(100));
+    }
+
 }
