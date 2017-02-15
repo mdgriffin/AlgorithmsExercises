@@ -36,4 +36,12 @@ public class MyArraysTest {
         assertArrayEquals(new int[]{1,2,3,5,6,7,7}, arr);
     }
 
+    @Test
+    public void insert() throws Exception {
+        int[] arr = new int[]{1,2,3,4,5,6,7,0};
+        MyArrays.insert(arr, 7, 9, 3);
+
+        assertArrayEquals(new int[]{1,2,3,9,4,5,6,7}, arr);
+    }
+
 }
