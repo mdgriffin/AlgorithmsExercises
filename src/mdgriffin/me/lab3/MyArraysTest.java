@@ -51,8 +51,6 @@ public class MyArraysTest {
 
         assertArrayEquals(new int[]{22, 45, 67, 2, 101, 54, 0}, arr2);
         assertEquals(6, arr2NewLen);
-
-
     }
 
 }
