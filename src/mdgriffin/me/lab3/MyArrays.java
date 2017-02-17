@@ -22,7 +22,7 @@ public class MyArrays {
     public static int findMax (int[] arr, int arrLen) {
         int max = arr[0];
 
-        for (int i = 0; i < arrLen; i++) {
+        for (int i = 1; i < arrLen; i++) {
             if (arr[i] > max) {
                 max = arr[i];
             }
@@ -52,20 +52,25 @@ public class MyArrays {
     }
 
 
-    public static void remove (int[] arr, int arrLen, int pos) {
+    public static int remove (int[] arr, int arrLen, int pos) {
         for (int i = pos; i < arrLen - 1; i++) {
             arr[i] = arr[i + 1];
         }
+
+        return --arrLen;
     }
 
-    public static void insert(int[] arr, int arrLen, int el, int pos) {
+    public static int insert(int[] arr, int arrLen, int el, int pos) {
         if (arr.length > arrLen) {
             for (int i = arrLen; i > pos; i--) {
                 arr[i] = arr[i - 1];
             }
 
             arr[pos] = el;
+            arrLen++;
         }
+
+        return arrLen;
     }
 
 }

@@ -95,7 +95,8 @@ public class Encryption {
      * @param padChar        The character to use when padding out
      * @return               A String padded out with padding character
      */
-    private static String padOut (String srcStr, int numCharacters, char padChar) {
+
+    public static String padOut (String srcStr, int numCharacters, char padChar) {
         for (int i = srcStr.length(); i <= numCharacters; i++) {
             srcStr += padChar;
         }

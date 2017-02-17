@@ -25,21 +25,34 @@ public class MyArraysTest {
 
     @Test
     public void remove() throws Exception {
-        int[] arr = new int[]{1,2,3,4,5,6,7};
-        MyArrays.remove(arr, 7, 3);
+        int[] arr1 = new int[]{1,2,3,4,5,6,7};
+        int newArr1Len = MyArrays.remove(arr1, 7, 3);
 
-        assertArrayEquals(new int[]{1,2,3,5,6,7,7}, arr);
+        assertArrayEquals(new int[]{1,2,3,5,6,7,7}, arr1);
+        assertEquals(6, newArr1Len);
+
+        int[] arr2 = new int[]{56, 12, 70, 201};
+        int newArr2Len = MyArrays.remove(arr2, 4, 0);
+
+        assertArrayEquals(new int[]{12, 70, 201, 201}, arr2);
+        assertEquals(3, newArr2Len);
     }
 
     @Test
     public void insert() throws Exception {
         int[] arr1 = new int[]{1,2,3,4,5,6,7,0};
-        MyArrays.insert(arr1, 7, 9, 3);
+        int arr1NewLen = MyArrays.insert(arr1, 7, 9, 3);
+
         assertArrayEquals(new int[]{1,2,3,9,4,5,6,7}, arr1);
+        assertEquals(8, arr1NewLen);
 
         int[] arr2 = new int[]{45, 67, 2, 101, 54, 0, 0};
-        MyArrays.insert(arr2, 5, 22, 0);
+        int arr2NewLen = MyArrays.insert(arr2, 5, 22, 0);
+
         assertArrayEquals(new int[]{22, 45, 67, 2, 101, 54, 0}, arr2);
+        assertEquals(6, arr2NewLen);
+
+
     }
 
 }

@@ -18,4 +18,16 @@ public class EncryptionTest {
         assertEquals("IWANDEREDlonelyasacloudThatfloatsonhighoervalesandhillsXXXXX", Encryption.decrypt("IehinWlagdAythhNafoiDslelEaorlRcavsEltaXDoslXluoeXodnsXnThaX", 12));
     }
 
+    @Test
+    public void decryptAlt() throws Exception {
+        assertEquals("THISISASECRETMESSAGE", Encryption.decryptAlt("TSRSHAESISTASEMGICEE", 5));
+        // TODO if number has a remainder subtract that number of char from end of string
+        assertEquals("IWANDEREDlonelyasacloudThatfloatsonhighoervalesandhillsXXXXX", Encryption.decryptAlt("IehinWlagdAythhNafoiDslelEaorlRcavsEltaXDoslXluoeXodnsXnThaX", 12));
+    }
+
+    @Test
+    public void padOut() throws Exception {
+        assertEquals("ABCDEFXXXX", Encryption.padOut("ABCDEF", 9, 'X'));
+        assertEquals("Two plus two is equal to Twenty Twooooooo", Encryption.padOut("Two plus two is equal to Twenty Two", 40, 'o'));
+    }
 }
