@@ -1,6 +1,5 @@
 package mdgriffin.me.lab3;
 
-
 import java.util.Arrays;
 
 public class MyArrays {
@@ -60,7 +59,13 @@ public class MyArrays {
     }
 
     public static void insert(int[] arr, int arrLen, int el, int pos) {
-    }
+        if (arr.length > arrLen) {
+            for (int i = arrLen; i > pos; i--) {
+                arr[i] = arr[i - 1];
+            }
 
+            arr[pos] = el;
+        }
+    }
 
 }

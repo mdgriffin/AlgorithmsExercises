@@ -2,13 +2,8 @@ package mdgriffin.me.lab3;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
-/**
- * Created by mdgriffin on 15/02/2017.
- */
 public class MyArraysTest {
     @Test
     public void sum() throws Exception {
@@ -38,10 +33,13 @@ public class MyArraysTest {
 
     @Test
     public void insert() throws Exception {
-        int[] arr = new int[]{1,2,3,4,5,6,7,0};
-        MyArrays.insert(arr, 7, 9, 3);
+        int[] arr1 = new int[]{1,2,3,4,5,6,7,0};
+        MyArrays.insert(arr1, 7, 9, 3);
+        assertArrayEquals(new int[]{1,2,3,9,4,5,6,7}, arr1);
 
-        assertArrayEquals(new int[]{1,2,3,9,4,5,6,7}, arr);
+        int[] arr2 = new int[]{45, 67, 2, 101, 54, 0, 0};
+        MyArrays.insert(arr2, 5, 22, 0);
+        assertArrayEquals(new int[]{22, 45, 67, 2, 101, 54, 0}, arr2);
     }
 
 }
