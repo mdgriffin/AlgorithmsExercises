@@ -22,7 +22,14 @@ public class MyArraysExtraTest {
 
     @Test
     public void selectionSort() throws Exception {
+        int[] arr1 = new int[]{23, 5, 67, 54};
+        //MyArraysExtra.selectionSort(arr1, 4);
 
+        int[] arr2 = new int[]{99, 88, 77, 66, 55};
+        MyArraysExtra.selectionSort(arr2, 5);
+
+        //assertArrayEquals(new int[]{5, 23, 54, 67}, arr1);
+        assertArrayEquals(new int[]{55, 66, 77, 88, 99}, arr2);
     }
 
     @Test

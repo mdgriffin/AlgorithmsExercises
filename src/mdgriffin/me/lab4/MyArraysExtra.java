@@ -47,8 +47,38 @@ public class MyArraysExtra extends MyArrays {
         return mergedArray;
     }
 
-    public static void selectionSort(int [] a, int currentSize) {
+    public static void swap (int[] a, int index1, int index2) {
+        if (index1 != index2) {
+            int temp = a[index1];
+            a[index1] = a[index2];
+            a[index2] = temp;
+        }
 
+    }
+
+
+    public static int findMinIndex (int[] arr, int arrLen, int startIndex) {
+        int min = arr[startIndex];
+        int minIndex = startIndex;
+
+        for (int i = startIndex; i < arrLen; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                minIndex = i;
+            }
+        }
+
+        return minIndex;
+    }
+
+    public static int findMinIndex (int[] arr) {
+        return findMinIndex(arr, arr.length, 0);
+    }
+
+    public static void selectionSort(int [] a, int currentSize) {
+        for  (int currentIndex = 0; currentIndex < a.length; currentIndex++) {
+            swap(a, currentIndex, findMinIndex(a, a.length, currentIndex));
+        }
     }
 
     public static void insertionSort(int [] a, int currentSize) {
