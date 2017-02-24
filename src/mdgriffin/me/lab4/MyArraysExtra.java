@@ -4,7 +4,6 @@ import mdgriffin.me.lab3.MyArrays;
 
 public class MyArraysExtra extends MyArrays {
 
-
     public static int linearSearch(int [] a, int currentSize, int searchKey) {
         int foundIndex = -1;
         int i = 0;
@@ -19,7 +18,6 @@ public class MyArraysExtra extends MyArrays {
 
         return foundIndex;
     }
-
 
     public static int[] merge(int []a1, int left1, int right1, int []a2, int left2, int right2) {
         int mergedArrayLen = right1 - left1 + right2 - left2 + 2;
@@ -53,9 +51,7 @@ public class MyArraysExtra extends MyArrays {
             a[index1] = a[index2];
             a[index2] = temp;
         }
-
     }
-
 
     public static int findMinIndex (int[] arr, int arrLen, int startIndex) {
         int min = arr[startIndex];
