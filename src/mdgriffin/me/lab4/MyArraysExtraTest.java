@@ -40,16 +40,18 @@ public class MyArraysExtraTest {
         int[] arr2 = new int[]{99, 88, 77, 66, 55};
         MyArraysExtra.insertionSort(arr2, 5);
 
+        int[] arr3 = new int[]{16, 9, 17, 11, 8};
+        MyArraysExtra.insertionSort(arr3, 5);
+
         assertArrayEquals(new int[]{5, 23, 54, 67}, arr1);
         assertArrayEquals(new int[]{55, 66, 77, 88, 99}, arr2);
-
-        //int[] arr3 = new int[]{16, 9, 17, 11, 8};
-
-        //MyArraysExtra.insertionSort(arr3, 5);
+        assertArrayEquals(new int[]{8, 9, 11, 16, 17}, arr3);
     }
 
     @Test
     public void binarySearch() throws Exception {
-
+        assertEquals(2, MyArraysExtra.binarySearch(new int[]{3, 4, 7, 12, 15, 18}, 6, 7));
+        assertEquals(0, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 1));
+        assertEquals(9, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 94));
     }
 }

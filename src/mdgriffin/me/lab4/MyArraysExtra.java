@@ -90,8 +90,25 @@ public class MyArraysExtra extends MyArrays {
 
 
     public static int binarySearch(int [] a, int currentSize, int searchKey) {
-        return 1;
-    }
+        int lower = 0;
+        int upper = currentSize;
+        int index = (lower + upper) / 2;
+        boolean found = false;
 
+        while (!found) {
+            if (a[index] == searchKey)  {
+                found = true;
+            } else {
+                if (a[index] > searchKey) {
+                    upper = index;
+                } else {
+                    lower = index;
+                }
+                index = (lower + upper) / 2;
+            }
+        }
+
+        return index;
+    }
 
 }
