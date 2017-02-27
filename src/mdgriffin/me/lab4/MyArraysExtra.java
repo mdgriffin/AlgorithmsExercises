@@ -78,7 +78,14 @@ public class MyArraysExtra extends MyArrays {
     }
 
     public static void insertionSort(int [] a, int currentSize) {
+        for (int i = 0; i < currentSize; i++) {
+            int j = i;
 
+            while (j > 0 && a[j] < a[j - 1]) {
+                swap(a, j - 1, j);
+                j--;
+            }
+        }
     }
 
 

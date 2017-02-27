@@ -23,18 +23,29 @@ public class MyArraysExtraTest {
     @Test
     public void selectionSort() throws Exception {
         int[] arr1 = new int[]{23, 5, 67, 54};
-        //MyArraysExtra.selectionSort(arr1, 4);
+        MyArraysExtra.selectionSort(arr1, 4);
 
         int[] arr2 = new int[]{99, 88, 77, 66, 55};
         MyArraysExtra.selectionSort(arr2, 5);
 
-        //assertArrayEquals(new int[]{5, 23, 54, 67}, arr1);
+        assertArrayEquals(new int[]{5, 23, 54, 67}, arr1);
         assertArrayEquals(new int[]{55, 66, 77, 88, 99}, arr2);
     }
 
     @Test
     public void insertionSort() throws Exception {
+        int[] arr1 = new int[]{23, 5, 67, 54};
+        MyArraysExtra.insertionSort(arr1, 4);
 
+        int[] arr2 = new int[]{99, 88, 77, 66, 55};
+        MyArraysExtra.insertionSort(arr2, 5);
+
+        assertArrayEquals(new int[]{5, 23, 54, 67}, arr1);
+        assertArrayEquals(new int[]{55, 66, 77, 88, 99}, arr2);
+
+        //int[] arr3 = new int[]{16, 9, 17, 11, 8};
+
+        //MyArraysExtra.insertionSort(arr3, 5);
     }
 
     @Test
