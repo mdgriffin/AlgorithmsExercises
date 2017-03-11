@@ -1,13 +1,21 @@
 package mdgriffin.me.lab4;
-import mdgriffin.me.utility.ArrayUtility;
+
+import java.util.Arrays;
 
 public class MyArraysExtraProfilerDriver {
 
     public static void main(String[] args) {
-        int arrSize = 4500;
+        int arrSize = 10000;
         int[] arr = new int[arrSize];
+        int[] arr2;
+        int[] arr3;
+        int[] arr4;
 
-        ArrayUtility.generateRandomIntArray(arr, arrSize, 10000);
+        MyArraysExtra.generateRandomIntArray(arr, arrSize, 567);
+
+        arr2 = arr.clone();
+        arr3 = arr.clone();
+        arr4 = arr.clone();
 
         long insertionStartTime = System.nanoTime();
         MyArraysExtra.insertionSort(arr, arrSize);
@@ -16,12 +24,30 @@ public class MyArraysExtraProfilerDriver {
         double insertionDifference = (insertionEndTime - insertionStartTime)/1e6;
 
         long selectionStarTime = System.nanoTime();
-        MyArraysExtra.selectionSort(arr, arrSize);
+        MyArraysExtra.selectionSort(arr2, arrSize);
         long selectionEndTime = System.nanoTime();
 
         double selectionDifference = (selectionEndTime - selectionStarTime)/1e6;
 
-        System.out.println("Insertion Difference: " + insertionDifference + "\nSelection Difference: " +  selectionDifference);
+        long sortStarTime = System.nanoTime();
+        Arrays.sort(arr3);
+        long sortEndTime = System.nanoTime();
+
+        double sortDifference = (sortEndTime - sortStarTime)/1e6;
+
+        long parallelSortStarTime = System.nanoTime();
+        Arrays.parallelSort(arr4);
+        long parallelSortEndTime = System.nanoTime();
+
+        double parallelSortDifference = (parallelSortEndTime - parallelSortStarTime)/1e6;
+
+
+        System.out.println(
+            "Insertion Difference: " + insertionDifference +
+            "\nSelection Difference: " +  selectionDifference +
+            "\nSort Difference: " +  sortDifference +
+            "\nParallel Sort Difference: " +  parallelSortDifference
+        );
     }
 
 }

@@ -2,6 +2,8 @@ package mdgriffin.me.lab4;
 
 import mdgriffin.me.lab3.MyArrays;
 
+import java.util.Random;
+
 public class MyArraysExtra extends MyArrays {
 
     public static int linearSearch(int [] a, int currentSize, int searchKey) {
@@ -88,7 +90,6 @@ public class MyArraysExtra extends MyArrays {
         }
     }
 
-
     public static int binarySearch(int [] a, int currentSize, int searchKey) {
         int lower = 0;
         int upper = currentSize;
@@ -109,6 +110,14 @@ public class MyArraysExtra extends MyArrays {
         }
 
         return index;
+    }
+
+    public static void generateRandomIntArray (int[] arr, int numElements, int seed) {
+        Random rnd = new Random(seed);
+
+        for (int i = 0; i < numElements; i++) {
+            arr[i] = rnd.nextInt();
+        }
     }
 
 }
