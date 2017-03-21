@@ -27,7 +27,7 @@ public class MultiDimensionalArrays {
     }
 
     public static String tablePrint (int[][] arr, int rows, int cols) {
-
+        return "";
     }
 
 }
