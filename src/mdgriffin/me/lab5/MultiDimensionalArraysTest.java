@@ -23,4 +23,19 @@ public class MultiDimensionalArraysTest {
         assertArrayEquals(arr, checkeredArr);
     }
 
+    public void fillEdge () throws Exception {
+        int[][] arr = new int[4][4];
+        int[][] edgedArr = {
+                {-1, -1, -1, -1},
+                {-1, 0, 0, -1},
+                {-1, 0, 0, -1},
+                {-1, -1, -1, -1}
+        };
+
+        MultiDimensionalArrays.fillEdge(arr, 4, 4);
+
+        assertArrayEquals(arr, edgedArr);
+
+
+    }
 }
