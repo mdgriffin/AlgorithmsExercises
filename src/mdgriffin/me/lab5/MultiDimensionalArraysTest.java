@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  */
 public class MultiDimensionalArraysTest {
     @Test
-    public void checkboarderFill() throws Exception {
+    public void checkerboardFill() throws Exception {
         int[][] arr = new int[4][4];
         int[][] checkeredArr = {
             {1, 0, 1, 0},
