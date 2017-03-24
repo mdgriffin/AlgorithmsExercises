@@ -19,7 +19,7 @@ public class MultiDimensionalArrays {
     public static void fillEdge (int[][] arr, int rows, int cols) {
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
-                if (row == 0 || col == 0 || row == rows - 1 || cols == cols - 1) {
+                if (row == 0 || col == 0 || row == rows - 1 || col == cols - 1) {
                     arr[row][col] = -1;
                 }
             }
