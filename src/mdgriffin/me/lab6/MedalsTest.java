@@ -26,6 +26,7 @@ public class MedalsTest {
                 medals.set(row, col, testCounts[row][col]);
             }
         }
+
     }
 
     @Test
