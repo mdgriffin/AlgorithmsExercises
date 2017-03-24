@@ -27,7 +27,17 @@ public class MultiDimensionalArrays {
     }
 
     public static String tablePrint (int[][] arr, int rows, int cols) {
-        return "";
+        String table = "";
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                table += String.format("%-5d", arr[row][col]);
+            }
+
+            table += "\n";
+        }
+
+        return  table;
     }
 
 }
