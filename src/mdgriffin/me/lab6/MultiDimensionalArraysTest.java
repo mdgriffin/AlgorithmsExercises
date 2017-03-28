@@ -35,4 +35,26 @@ public class MultiDimensionalArraysTest {
         assertArrayEquals(arr, edgedArr);
 
     }
+
+    @Test
+    public void isMagicSquare () throws  Exception {
+        int[][] arr = {
+            {16, 3, 2, 13},
+            {5, 10, 11, 8},
+            {9, 6, 7, 12},
+            {4, 15, 14, 1}
+        };
+
+        int[][] arr2 =  {
+            {3, 16, 2, 13},
+            {5, 10, 11, 8},
+            {9, 6, 7, 12},
+            {4, 15, 14, 1}
+        };
+
+        assertEquals(MultiDimensionalArrays.isMagicSquare(arr, 4, 4), true);
+
+        assertEquals(MultiDimensionalArrays.isMagicSquare(arr2, 4, 4), false);
+
+    }
 }

@@ -40,4 +40,8 @@ public class MultiDimensionalArrays {
         return  table;
     }
 
+    public static boolean isMagicSquare (int[][] arr, int rows, int cols) {
+        return true;
+    }
+
 }
