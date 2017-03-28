@@ -41,8 +41,8 @@ public class MultiDimensionalArrays {
     }
 
     public static boolean isMagicSquare (int[][] arr, int rows, int cols) {
-        boolean magicSquare = true;
 
+        // Loop to test if array contains whole 1..n sequence
         for (int i = 0; i < rows * cols; i++) {
             boolean indexFound = false;
 
@@ -61,7 +61,10 @@ public class MultiDimensionalArrays {
             }
         }
 
-        return magicSquare;
+        // TODO: Check that array rows and columns sum
+
+
+        return true;
     }
 
 }
