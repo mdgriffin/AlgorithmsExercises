@@ -25,4 +25,8 @@ public class ClassDetails {
     public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
+
+    public String toString () {
+        return getName();
+    }
 }
