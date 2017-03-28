@@ -47,14 +47,13 @@ public class MultiDimensionalArraysTest {
 
         int[][] arr2 =  {
             {3, 16, 2, 13},
-            {5, 10, 11, 8},
+            {5, 9, 11, 8},
             {9, 6, 7, 12},
             {4, 15, 14, 1}
         };
 
-        assertEquals(MultiDimensionalArrays.isMagicSquare(arr, 4, 4), true);
-
-        assertEquals(MultiDimensionalArrays.isMagicSquare(arr2, 4, 4), false);
+        assertEquals(true, MultiDimensionalArrays.isMagicSquare(arr, 4, 4));
+        assertEquals(false, MultiDimensionalArrays.isMagicSquare(arr2, 4, 4));
 
     }
 }

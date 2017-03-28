@@ -41,7 +41,27 @@ public class MultiDimensionalArrays {
     }
 
     public static boolean isMagicSquare (int[][] arr, int rows, int cols) {
-        return true;
+        boolean magicSquare = true;
+
+        for (int i = 0; i < rows * cols; i++) {
+            boolean indexFound = false;
+
+            one_arr_iteration:
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < cols; col++) {
+                    if ((i + 1) == arr[row][col]) {
+                        indexFound = true;
+                        break one_arr_iteration;
+                    }
+                }
+            }
+
+            if (!indexFound) {
+                return false;
+            }
+        }
+
+        return magicSquare;
     }
 
 }
