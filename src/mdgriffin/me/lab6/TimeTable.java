@@ -20,7 +20,7 @@ public class TimeTable {
 
     public void display() {
         String table = String.format(
-                "%-10s%-20s%-20s%-20s%-20s%-20s",
+                "%-10s%-22s%-22s%-22s%-20s%-22s",
                 "Time",
                 "Monday",
                 "Tuesday",
@@ -33,9 +33,9 @@ public class TimeTable {
             table += String.format("\n%-10s", (j + 9) + ":00");
             for (int i = 0; i < DAYS; i++) {
                 if (get(i, j) == null) {
-                    table += String.format("%-20s", "----------");
+                    table += String.format("%-22s", "----------");
                 } else {
-                    table += String.format("%-20s", get(i, j));
+                    table += String.format("%-22s", get(i, j));
                 }
 
             }
