@@ -64,6 +64,7 @@ public class MultiDimensionalArraysTest {
 
         assertEquals(true, MultiDimensionalArrays.isMagicSquare(arr, 4, 4));
         assertEquals(false, MultiDimensionalArrays.isMagicSquare(arr2, 4, 4));
+        assertEquals(false, MultiDimensionalArrays.isMagicSquare(arr3, 4, 4));
 
     }
 }
