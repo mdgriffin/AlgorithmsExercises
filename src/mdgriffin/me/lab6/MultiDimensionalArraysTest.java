@@ -1,4 +1,4 @@
-package mdgriffin.me.lab5;
+package mdgriffin.me.lab6;
 
 import org.junit.Test;
 
