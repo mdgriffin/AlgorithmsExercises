@@ -14,8 +14,8 @@ public class TicTacToe
         board = new String[ROWS][COLUMNS];
         // Fill with spaces
         for (int i = 0; i < ROWS; i++)
-            for (int j = 0; j < COLUMNS; j++)
-                board[i][j] = " ";
+        for (int j = 0; j < COLUMNS; j++)
+            board[i][j] = " ";
     }
 
     /**
@@ -50,7 +50,44 @@ public class TicTacToe
         return r;
     }
 
-    public boolean getWinner () {
-        return true;
+    public String getWinner () {
+        // loop over the board
+        // check if any of the rows, columns or diagonals contain the same 'o' or 'x' character
+        String winner = " ";
+
+        for (int row = 0; row < ROWS; row++)
+        {
+            int numOInRow = 0;
+            int numXInRow = 0;
+            int numOInCol = 0;
+            int numXInCol = 0;
+
+            for (int col = 0; col < COLUMNS; col++)
+            {
+                if (board[row][col].equals("o")) {
+                    numOInRow++;
+                } else if (board[row][col].equals("x")) {
+                    numXInRow++;
+                }
+
+                if (board[col][row].equals("o")) {
+                    numOInCol++;
+                } else if (board[col][row].equals("x")) {
+                    numXInCol++;
+                }
+            }
+
+            if (numOInRow == ROWS || numOInCol == COLUMNS)
+            {
+                winner = "o";
+                break;
+            } else if (numXInRow == ROWS || numXInCol == COLUMNS)
+            {
+                winner = "x";
+                break;
+            }
+        }
+
+        return winner;
     }
 }
