@@ -1,8 +1,5 @@
 package mdgriffin.me.lab6;
 
-/**
- * Created by mdgri on 28/03/2017.
- */
 public class TimeTableDriver {
     public static void main(String[] args) {
         TimeTable myTimeTable = new TimeTable();

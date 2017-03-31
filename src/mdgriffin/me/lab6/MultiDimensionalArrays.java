@@ -40,7 +40,13 @@ public class MultiDimensionalArrays {
         return  table;
     }
 
-    public static boolean isMagicSquare (int[][] arr, int rows, int cols) {
+    public static boolean isMagicSquare (int[][] arr) {
+        int rows = arr.length;
+        int cols = arr[0].length;
+
+        if (rows != cols) {
+            return false;
+        }
 
         // Loop to test if array contains whole 1..n sequence
         for (int i = 0; i < rows * cols; i++) {
@@ -62,7 +68,26 @@ public class MultiDimensionalArrays {
         }
 
         // TODO: Check that array rows and columns sum
+        int sum = 0;
 
+        for (int row = 0; row < rows; row++) {
+            int rowSum = 0;
+            int colSum = 0;
+
+            for (int col = 0; col < cols; col++) {
+                //arr[]
+                rowSum += arr[row][col];
+                colSum += arr[col][row];
+            }
+
+            if (row == 0) {
+                sum = colSum;
+            }
+
+            if (colSum != rowSum || rowSum != sum) {
+                return false;
+            }
+        }
 
         return true;
     }
