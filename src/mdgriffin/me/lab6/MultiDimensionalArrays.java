@@ -67,15 +67,14 @@ public class MultiDimensionalArrays {
             }
         }
 
-        // TODO: Check that array rows and columns sum
         int sum = 0;
 
+        // Loop that tests that all rows and columns sum to the same number
         for (int row = 0; row < rows; row++) {
             int rowSum = 0;
             int colSum = 0;
 
             for (int col = 0; col < cols; col++) {
-                //arr[]
                 rowSum += arr[row][col];
                 colSum += arr[col][row];
             }
