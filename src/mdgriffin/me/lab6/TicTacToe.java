@@ -55,6 +55,7 @@ public class TicTacToe
         // check if any of the rows, columns or diagonals contain the same 'o' or 'x' character
         String winner = " ";
 
+        // TODO: Check diagonals
         for (int row = 0; row < ROWS; row++)
         {
             int numOInRow = 0;
@@ -64,27 +65,18 @@ public class TicTacToe
 
             for (int col = 0; col < COLUMNS; col++)
             {
-                if (board[row][col].equals("o")) {
-                    numOInRow++;
-                } else if (board[row][col].equals("x")) {
-                    numXInRow++;
-                }
-
-                if (board[col][row].equals("o")) {
-                    numOInCol++;
-                } else if (board[col][row].equals("x")) {
-                    numXInCol++;
-                }
+                numOInRow += (board[row][col].equals("o")? 1 : 0);
+                numXInRow += (board[row][col].equals("x")? 1 : 0);
+                numOInCol += (board[col][row].equals("o")? 1 : 0);
+                numXInCol += (board[col][row].equals("x")? 1 : 0);
             }
 
             if (numOInRow == ROWS || numOInCol == COLUMNS)
             {
-                winner = "o";
-                break;
+                return "o";
             } else if (numXInRow == ROWS || numXInCol == COLUMNS)
             {
-                winner = "x";
-                break;
+                return"x";
             }
         }
 

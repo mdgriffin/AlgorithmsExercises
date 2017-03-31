@@ -48,28 +48,27 @@ public class MultiDimensionalArrays {
             return false;
         }
 
-        // Loop to test if array contains whole 1..n sequence
-        for (int i = 0; i < rows * cols; i++) {
-            boolean indexFound = false;
+        // TODO: Read over and understand
+        boolean isThere[] = new boolean[rows * cols + 1];
 
-            one_arr_iteration:
-            for (int row = 0; row < rows; row++) {
-                for (int col = 0; col < cols; col++) {
-                    if ((i + 1) == arr[row][col]) {
-                        indexFound = true;
-                        break one_arr_iteration;
-                    }
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (arr[row][col] < 1 || arr[ row][col]> rows * cols) {
+                    return false;
                 }
-            }
 
-            if (!indexFound) {
-                return false;
+                if (isThere[arr[row][col]]) {
+                    return false;
+                } else {
+                    isThere[arr[row][col]] = true;
+                }
             }
         }
 
         int sum = 0;
 
         // Loop that tests that all rows and columns sum to the same number
+        // TODO: Check the diagonals
         for (int row = 0; row < rows; row++) {
             int rowSum = 0;
             int colSum = 0;
