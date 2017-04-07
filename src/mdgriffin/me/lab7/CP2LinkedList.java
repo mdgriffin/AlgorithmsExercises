@@ -100,6 +100,20 @@ public class CP2LinkedList<E> {
         }
     }
 
+    public E getLast () {
+        if (first != null) {
+            Node current = first;
+
+            while (current.next != null) {
+                current = current.next;
+            }
+
+            return current.data;
+        } else {
+            throw new NoSuchElementException();
+        }
+    }
+
     public void print() {
         if (first != null) {
             Node current = first;
