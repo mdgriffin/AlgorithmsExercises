@@ -10,11 +10,17 @@ public class CP2LinkedListDriver {
 
         cp2LinkedList.addFirst("John");
 
+        cp2LinkedList.addLast("Mary");
+        cp2LinkedList.addLast("Joan");
+        cp2LinkedList.addLast("Timothy");
+
         //cp2LinkedList
 
         /*System.out.println(Arrays.toString(cp2LinkedList));*/
 
         cp2LinkedList.print();
+
+        System.out.println(cp2LinkedList.size());
 
 
     }

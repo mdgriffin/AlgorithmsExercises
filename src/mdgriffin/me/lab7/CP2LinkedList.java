@@ -64,9 +64,27 @@ public class CP2LinkedList<E> {
         return listLen;
     }
 
+    public void addLast (E element)
+    {
+        Node newNode = new Node();
+        newNode.data = element;
+
+        if (first != null) {
+            Node current = first;
+
+            while (current.next != null) {
+                current = current.next;
+            }
+
+            current.next = newNode;
+        } else {
+            first = newNode;
+        }
+    }
+
     public void print() {
         Node current = first;
-        while (current != null) {
+        while (current.next != null) {
             System.out.println(current.data);
             current = current.next;
         }
