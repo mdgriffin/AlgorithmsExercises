@@ -52,7 +52,7 @@ public class CP2LinkedList<E> {
         return first == null;
     }
 
-    public int count() {
+    public int size() {
         int listLen = 0;
 
         Node current = first;
