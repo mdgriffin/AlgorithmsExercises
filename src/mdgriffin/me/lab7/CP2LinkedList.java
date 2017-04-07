@@ -13,8 +13,10 @@ public class CP2LinkedList<E> {
     private class Node {
         public E data;
         public Node next;
+        public Node prev;
     }
     private Node first;
+    private Node last;
 
     /**
      Constructs an empty linked list.
@@ -22,6 +24,7 @@ public class CP2LinkedList<E> {
     public CP2LinkedList()
     {
         first = null;
+        last = null;
     }
 
     /**
@@ -34,6 +37,10 @@ public class CP2LinkedList<E> {
         newNode.data = element;
         newNode.next = first;
         first = newNode;
+
+        if (last == null) {
+            last = first;
+        }
     }
 
     public E getFirst() {
@@ -45,7 +52,15 @@ public class CP2LinkedList<E> {
     public void removeFirst() {
         if (first == null)
             throw new NoSuchElementException();
-        first = first.next;
+        if (first == last) {
+            first = null;
+            last = null;
+        } else if (first.next == last) {
+            last.prev = null;
+            first = last;
+        } else {
+            first = first.next;
+        }
     }
 
     public boolean isEmpty() {
@@ -66,61 +81,54 @@ public class CP2LinkedList<E> {
 
     public void addLast (E element)
     {
-        Node newNode = new Node();
-        newNode.data = element;
-
-        if (first != null) {
-            Node current = first;
-
-            while (current.next != null) {
-                current = current.next;
-            }
-
-            current.next = newNode;
+        if (last == null) {
+            addFirst(element);
         } else {
-            first = newNode;
+            Node newNode = new Node();
+            newNode.data = element;
+
+            newNode.prev = last;
+            last.next = newNode;
+            last = newNode;
         }
     }
 
     public void removeLast () {
-        if (first != null) {
-            Node current = first;
 
-            while (current.next != null) {
-                current = current.next;
-            }
-
-            if (current == first) {
-                first = null;
-            }
-
-            current = null;
-        } else {
+        if (last == null) {
             throw new NoSuchElementException();
+        }
+
+        if (last.prev == null) {
+            removeFirst();
+        } else {
+            last.prev.next = null;
+            last = last.prev;
         }
     }
 
     public E getLast () {
-        if (first != null) {
-            Node current = first;
-
-            while (current.next != null) {
-                current = current.next;
-            }
-
-            return current.data;
-        } else {
+        if (last == null) {
             throw new NoSuchElementException();
         }
+
+        return  last.data;
+
     }
 
     public void print() {
-        if (first != null) {
-            Node current = first;
-            while (current.next != null) {
-                System.out.println(current.data);
-                current = current.next;
-            }
+        Node current = first;
+        while (current != null) {
+            System.out.println(current.data);
+            current = current.next;
+        }
+    }
+
+    public void printReverse() {
+        Node current = last;
+        while (current != null) {
+            System.out.println(current.data);
+            current = current.prev;
         }
     }
 }
