@@ -82,11 +82,31 @@ public class CP2LinkedList<E> {
         }
     }
 
+    public void removeLast () {
+        if (first != null) {
+            Node current = first;
+
+            while (current.next != null) {
+                current = current.next;
+            }
+
+            if (current == first) {
+                first = null;
+            }
+
+            current = null;
+        } else {
+            throw new NoSuchElementException();
+        }
+    }
+
     public void print() {
-        Node current = first;
-        while (current.next != null) {
-            System.out.println(current.data);
-            current = current.next;
+        if (first != null) {
+            Node current = first;
+            while (current.next != null) {
+                System.out.println(current.data);
+                current = current.next;
+            }
         }
     }
 }

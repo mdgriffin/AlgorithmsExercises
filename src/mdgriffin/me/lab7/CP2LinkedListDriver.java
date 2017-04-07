@@ -14,6 +14,8 @@ public class CP2LinkedListDriver {
         cp2LinkedList.addLast("Joan");
         cp2LinkedList.addLast("Timothy");
 
+        cp2LinkedList.removeLast();
+
         //cp2LinkedList
 
         /*System.out.println(Arrays.toString(cp2LinkedList));*/
