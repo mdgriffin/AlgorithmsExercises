@@ -52,6 +52,18 @@ public class CP2LinkedList<E> {
         return first == null;
     }
 
+    public int count() {
+        int listLen = 0;
+
+        Node current = first;
+        while (current != null) {
+            listLen++;
+            current = current.next;
+        }
+
+        return listLen;
+    }
+
     public void print() {
         Node current = first;
         while (current != null) {
