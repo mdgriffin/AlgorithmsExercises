@@ -10,6 +10,7 @@ import java.util.NoSuchElementException;
  java.util.LinkedList class.
  */
 public class CP2LinkedList<E> {
+
     private class Node {
         public E data;
         public Node next;
