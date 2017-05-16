@@ -117,6 +117,34 @@ public class MyArraysExtra extends MyArrays {
         }
     }
 
+    public static int binarySearch(String [] a, int currentSize, String searchKey) {
+        int lower = 0;
+        int upper = currentSize;
+        int index = (lower + upper) / 2;
+        boolean found = false;
+
+        while (!found && lower <= upper) {
+            String currentEl = a[index];
+
+            if (currentEl.equals(searchKey))  {
+                found = true;
+            } else {
+                if (a[index].charAt(0) > searchKey.charAt(0)) {
+                    upper = index - 1;
+                } else {
+                    lower = index + 1;
+                }
+                index = (lower + upper) / 2;
+            }
+        }
+
+        if (found == true) {
+            return index;
+        } else {
+            return -1;
+        }
+    }
+
     public static void generateRandomIntArray (int[] arr, int numElements, int seed) {
         Random rnd = new Random(seed);
 
