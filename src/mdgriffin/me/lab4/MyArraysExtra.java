@@ -29,7 +29,9 @@ public class MyArraysExtra extends MyArrays {
         int a2Index = left2;
         int i = 0;
 
+        // keep loop until at end of both arrays
         while (a1Index < right1 && a2Index < right2) {
+            // check which array contains the next smallest element
             if (a1[a1Index] <= a2[a2Index]) {
                 mergedArray[i++] = a1[a1Index++];
             } else {
@@ -37,6 +39,8 @@ public class MyArraysExtra extends MyArrays {
             }
         }
 
+        // if not all the element have been added from one array
+        // loop over them until they have all been added
         for(; i < mergedArrayLen; i++) {
             if (a1Index <= right1) {
                 mergedArray[i] = a1[a1Index++];
