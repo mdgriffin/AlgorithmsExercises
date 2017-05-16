@@ -97,20 +97,24 @@ public class MyArraysExtra extends MyArrays {
         int index = (lower + upper) / 2;
         boolean found = false;
 
-        while (!found) {
+        while (!found && lower <= upper) {
             if (a[index] == searchKey)  {
                 found = true;
             } else {
                 if (a[index] > searchKey) {
-                    upper = index;
+                    upper = index - 1;
                 } else {
-                    lower = index;
+                    lower = index + 1;
                 }
                 index = (lower + upper) / 2;
             }
         }
 
-        return index;
+        if (found == true) {
+            return index;
+        } else {
+            return -1;
+        }
     }
 
     public static void generateRandomIntArray (int[] arr, int numElements, int seed) {

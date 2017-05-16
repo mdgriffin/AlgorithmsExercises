@@ -53,5 +53,7 @@ public class MyArraysExtraTest {
         assertEquals(2, MyArraysExtra.binarySearch(new int[]{3, 4, 7, 12, 15, 18}, 6, 7));
         assertEquals(0, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 1));
         assertEquals(9, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 94));
+        // Not in array
+        assertEquals(-1, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 47));
     }
 }
