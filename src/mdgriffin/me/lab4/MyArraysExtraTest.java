@@ -50,14 +50,13 @@ public class MyArraysExtraTest {
 
     @Test
     public void binarySearch() throws Exception {
-        //assertEquals(2, MyArraysExtra.binarySearch(new int[]{3, 4, 7, 12, 15, 18}, 6, 7));
-        //assertEquals(0, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 1));
-        //assertEquals(9, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 94));
+        assertEquals(2, MyArraysExtra.binarySearch(new int[]{3, 4, 7, 12, 15, 18}, 6, 7));
+        assertEquals(0, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 1));
+        assertEquals(9, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 94));
         // Not in array
-        //assertEquals(-1, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 47));
+        assertEquals(-1, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 47));
 
-
-        //assertEquals(5, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "red", "violet", "yellow" }, 7, "violet"));
+        assertEquals(5, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "red", "violet", "yellow" }, 7, "violet"));
         assertEquals(-1, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "red", "violet", "yellow" }, 7, "black"));
     }
 }

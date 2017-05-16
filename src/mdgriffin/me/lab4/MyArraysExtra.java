@@ -129,7 +129,7 @@ public class MyArraysExtra extends MyArrays {
             if (currentEl.equals(searchKey))  {
                 found = true;
             } else {
-                if (a[index].charAt(0) > searchKey.charAt(0)) {
+                if (a[index].compareTo(searchKey) > 0) {
                     upper = index - 1;
                 } else {
                     lower = index + 1;
