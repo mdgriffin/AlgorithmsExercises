@@ -56,7 +56,8 @@ public class MyArraysExtraTest {
         // Not in array
         assertEquals(-1, MyArraysExtra.binarySearch(new int[]{1, 4, 7, 12, 45, 67, 69, 82, 83, 94}, 10, 47));
 
-        assertEquals(5, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "red", "violet", "yellow" }, 7, "violet"));
+        // Testing string overload
+        assertEquals(5, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "violet", "violet", "yellow" }, 7, "violet"));
         assertEquals(-1, MyArraysExtra.binarySearch(new String[]{"blue", "green", "indigo", "orange", "red", "violet", "yellow" }, 7, "black"));
     }
 }
