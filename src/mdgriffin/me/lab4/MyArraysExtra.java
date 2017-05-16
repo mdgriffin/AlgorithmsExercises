@@ -14,6 +14,7 @@ public class MyArraysExtra extends MyArrays {
         while (!found && i < currentSize) {
             if (a[i] == searchKey) {
                 foundIndex = i;
+                found = true;
             }
             i++;
         }
