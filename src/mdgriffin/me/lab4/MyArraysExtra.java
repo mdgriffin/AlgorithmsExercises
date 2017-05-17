@@ -64,6 +64,14 @@ public class MyArraysExtra extends MyArrays {
         return mergedArray;
     }
 
+    /**
+     * Swaps to elements in an array with each other
+     *
+     * @param a       The array containing the elements to swap
+     * @param index1  The index of the first element
+     * @param index2  The index of the second element
+     */
+
     public static void swap (int[] a, int index1, int index2) {
         if (index1 != index2) {
             int temp = a[index1];
