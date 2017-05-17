@@ -22,6 +22,18 @@ public class MyArraysExtra extends MyArrays {
         return foundIndex;
     }
 
+    /**
+     * Merges Two Sorted Arrays
+     *
+     * @param a1       The first array
+     * @param left1    The beginning index of the first array
+     * @param right1   The end index of the first array
+     * @param a2       The second array
+     * @param left2    The beginning index of the second array
+     * @param right2   The end index of the second array
+     * @return         A merged sorted array containing all the element from the provided arrays
+     */
+
     public static int[] merge(int []a1, int left1, int right1, int []a2, int left2, int right2) {
         int mergedArrayLen = right1 - left1 + right2 - left2 + 2;
         int[] mergedArray = new int[mergedArrayLen];
