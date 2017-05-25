@@ -103,6 +103,13 @@ public class MyArraysExtra extends MyArrays {
         return minIndex;
     }
 
+    /**
+     * Overload of the findMinIndex method, check the entire array
+     *
+     * @param arr   The array to search over
+     * @return
+     */
+
     public static int findMinIndex (int[] arr) {
         return findMinIndex(arr, arr.length, 0);
     }
