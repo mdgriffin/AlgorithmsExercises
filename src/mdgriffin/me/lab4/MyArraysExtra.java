@@ -80,6 +80,15 @@ public class MyArraysExtra extends MyArrays {
         }
     }
 
+    /**
+     * Finds the index of the smallest element in an array
+     *
+     * @param arr          The array to search
+     * @param arrLen       The length of the array
+     * @param startIndex   The index to start searching for
+     * @return             The index of the smallest index
+     */
+
     public static int findMinIndex (int[] arr, int arrLen, int startIndex) {
         int min = arr[startIndex];
         int minIndex = startIndex;
