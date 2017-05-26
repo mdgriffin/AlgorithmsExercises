@@ -120,6 +120,13 @@ public class MyArraysExtra extends MyArrays {
         }
     }
 
+    /**
+     * Insertion Sort Algorithms Implementation
+     *
+     * @param a               The array to sort
+     * @param currentSize     The size of the array
+     */
+
     public static void insertionSort(int [] a, int currentSize) {
         for (int i = 0; i < currentSize; i++) {
             int j = i;
@@ -130,6 +137,15 @@ public class MyArraysExtra extends MyArrays {
             }
         }
     }
+
+    /**
+     * Implementation of the binary search algorithm
+     *
+     * @param a             The array to search in
+     * @param currentSize   The size of the array
+     * @param searchKey     The key to search for
+     * @return
+     */
 
     public static int binarySearch(int [] a, int currentSize, int searchKey) {
         int lower = 0;
